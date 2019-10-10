@@ -10,7 +10,7 @@ int sum(int x, int y){
 int square(int n){
 	return n*n;
 }
-int get_max(int a,int b)
+int getmax(int a,int b)
 {
 	if(a>b)
 		return a;
@@ -19,6 +19,16 @@ int get_max(int a,int b)
 	
 }
 int main(int argc, char *argv[]) {
+	int x=4,y=7;
+	int output;
+	
+	output=sum(x,y);	
+	printf("sum : %d \n",output);
+	
+	output=square(x);
+	printf("square : %d \n",output);
+	
+	printf("Max : %d \n",getmax(x,y));
 	
 	
 	return 0;
