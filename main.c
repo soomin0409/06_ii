@@ -1,17 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
+int factorial(int n){
+	int i,res=1;
+	for(i=1;i<=n;i++)
+	{
+		res= res*i;
+	}
+	return res;
+}
+
 
 int main(int argc, char *argv[]){
-	int i, max=45;
+	int n,r,nCr;
+	printf("nCr : ");
+	scanf("%d %d",&n,&r);
 	
-	srand((unsigned)time(NULL));
-	for(i=0;i<6;i++)
-	{
-		printf("%d",1+rand()%max);
-	}
+	nCr= factorial(n)/(factorial(n-r)*factorial(r));
+	printf("nCr : %d\n",nCr);
 	return 0;
-	
 }
 
